@@ -1,0 +1,1 @@
+<span class="form-element-message error-message " id="email">Mora početi sa slovom. Potrebno je najmanje tri znaka, a najviše 16 u jednoj reči. Reči mogu biti odvojene tačkom ili donjom crticom. U okviru reči se mogu nalaziti brojevi.</span>

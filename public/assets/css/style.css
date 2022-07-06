@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.roboto-slab, .btn, .form-control, .title, .roboto-slab-bold {
+  font-family: "Roboto Slab", serif;
+}
+
+.roboto-slab-bold {
+  font-weight: bold;
+}
+
+.vheight-100 {
+  height: 100vh;
+}
+
+.orange-forecolor {
+  color: #f2740d;
+}
+
+.orange-backcolor, .category {
+  background-color: #f2740d;
+}
+
+.black-forecolor, a {
+  color: #000;
+}
+
+.black-backcolor {
+  background-color: #000;
+}
+
+.orange-light-forecolor {
+  color: #fee4cd;
+}
+
+.orange-light-backcolor {
+  background-color: #fee4cd;
+}
+
+.blue-forecolor {
+  color: #0b96ff;
+}
+
+.blue-backcolor {
+  background-color: #0b96ff;
+}
+
+.blue-light-forecolor {
+  color: #cde9fe;
+}
+
+.blue-light-backcolor {
+  background-color: #cde9fe;
+}
+
+.grey-dark-forecolor {
+  color: #34373c;
+}
+
+.grey-dark-backcolor {
+  background-color: #34373c;
+}
+
+.white-forecolor, .category {
+  color: #fff;
+}
+
+.white-backcolor, .wrapper .child {
+  background-color: #fff;
+}
+
+.grey-light-forecolor {
+  color: #e0e0de;
+}
+
+.grey-light-backcolor, .wrapper {
+  background-color: #e0e0de;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  border: 1px solid #e0e0de;
+  border-radius: 8px;
+}
+.wrapper .child {
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.transition-color, a {
+  transition: color 0.5s ease-in-out;
+}
+
+.transition-backcolor {
+  transition: background-color 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none;
+  color: #f2740d;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.box-shadow, #bars-menu, header {
+  box-shadow: 3px 3px 20px rgba(51, 51, 51, 0.5);
+}
+
+.border-top-orange, footer, header {
+  border-top: 3px solid #f2740d;
+}
+
+.border-grey-light, .discusions, .follower-card, .profile-pic-small, .profile-pic {
+  border: 1px solid #e0e0de;
+  border-radius: 8px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.form-element-message {
+  display: none;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-border {
+  border-color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+.success-border {
+  border-color: green;
+}
+
+.form-control {
+  transition: border 0.5s ease-in-out;
+  border-width: 3px;
+}
+
+#username:hover #user-links {
+  display: block;
+}
+
+#user-links {
+  display: none;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.fa-bars {
+  font-size: 14pt;
+}
+
+.cursor-pointer, #bars {
+  cursor: pointer;
+}
+
+#bars-menu {
+  z-index: 15;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+  width: 0;
+}
+#bars-menu__close {
+  font-size: 14pt;
+}
+
+.height-500 {
+  height: 500px;
+}
+
+.height-700 {
+  height: 700px;
+}
+
+.height-400 {
+  height: 400px;
+}
+
+.profile-pic-small-wrapper-width {
+  width: 100px;
+}
+
+.title-1 {
+  font-size: 15px;
+}
+
+.comment {
+  border-bottom: 1px solid #e0e0de;
+}
+
+.comment-section {
+  display: none;
+}
+
+#users-profile-menu {
+  border-top: 1px solid #e0e0de;
+  border-bottom: 1px solid #e0e0de;
+}
+
+.my-modal {
+  background-color: rgba(52, 55, 60, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 100vh;
+}
+
+.category {
+  border: 2px solid #f2740d;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

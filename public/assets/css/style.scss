@@ -1,0 +1,250 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        margin: 0;
+    }
+    // COLORS
+    $orange-color: #f2740d;
+    $black-color: #000;
+    $orange-light-color: #fee4cd;
+    $blue-color: #0b96ff;
+    $blue-light-color: #cde9fe;
+    $grey-dark-color: #34373c;
+    $white: #fff;
+    $grey-light:#e0e0de;
+    // FONTS
+    .roboto-slab{
+        font-family: 'Roboto Slab', serif;
+    }
+    .roboto-slab-bold{
+        @extend  .roboto-slab;
+        font-weight: bold;
+    }
+
+    // VHeight
+    .vheight-100{
+        height: 100vh;
+    }
+    // COLORS CLASSES
+    //#e0e0de
+
+    //"grey-light": #c9c9c7
+    @each $name, $value in (
+        "orange": $orange-color,
+        "black" : $black-color,
+        "orange-light": $orange-light-color,
+        "blue" : $blue-color,
+        "blue-light" : $blue-light-color,
+        "grey-dark": $grey-dark-color,
+        "white" : $white,
+        "grey-light":$grey-light
+    ){
+        .#{$name}-forecolor {
+            color: $value;
+        }
+        .#{$name}-backcolor{
+            background-color: $value;
+        }
+    }
+    .title{
+        font-size: 2rem;
+        @extend  .roboto-slab;
+    }
+    .sub-title{
+        font-size: 1.5rem;
+    }
+
+    // MIXINS
+    @mixin hover{
+        @content
+    }
+    @mixin setBorder($color, $borderWidth : 1px){
+        border: $borderWidth solid $color;
+        border-radius: 8px;
+    }
+    @mixin setSpecificBorder($side, $color, $borderWidth: 1px){
+        @if($side == top) {
+           border-top: $borderWidth solid $color;
+        }
+        @else if($side == botton){
+            border-bottom: $borderWidth solid $color;
+        }
+        @else if($side == left){
+            border-left: $borderWidth solid $color;
+        }
+        @else if($side == right){
+            border-right : $borderWidth solid $color;
+        }
+    }
+
+    .wrapper{
+        @extend .grey-light-backcolor;
+        @include setBorder($grey-light);
+        .child{
+            @include setBorder($white);
+            @extend .white-backcolor;
+        }
+    }
+    // Transfrom classes
+    .transition-color{
+        transition: color .5s ease-in-out;
+    }
+    .transition-backcolor{
+        transition: background-color .5s ease-in-out;
+    }
+// a and ul
+    a{
+        text-decoration: none !important;
+        @extend  .black-forecolor;
+        @extend .transition-color;
+        &:hover{
+            text-decoration: none;
+            color: $orange-color;
+
+        }
+    }
+    ul{
+        list-style-type: none;
+    }
+// BOX-SHADOW
+    .box-shadow{
+        box-shadow: 3px 3px 20px rgba(#333, 0.5);
+    }
+ //BODER CLASSES
+    .border-top-orange{
+        border-top: 3px solid $orange-color ;
+    }
+    .border-grey-light {
+        @include setBorder($grey-light);
+    }
+// NAVIGATION
+    header{
+        @extend .box-shadow;
+        @extend .border-top-orange;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+// NAVIGATION--END
+    .form-element-message{
+       display:none;
+    }
+    .error-message{
+        color: red;
+    }
+    .error-border{
+        border-color: red;
+    }
+    .success-message{
+        color: green;
+    }
+    .success-border{
+        border-color: green;
+    }
+    .form-control{
+        transition: border 0.5s ease-in-out;
+        border-width: 3px;
+        @extend .roboto-slab;
+    }
+    #username:hover #user-links{
+        display:block;
+    }
+    #user-links{
+        display:none;
+    }
+    .position-relative{
+        position:relative;
+    }
+    .position-absolute{
+        position: absolute;
+    }
+    //FOOTER
+    footer{
+        @extend .border-top-orange;
+    }
+    $font-x : 14pt;
+    .fa-bars{
+        font-size:$font-x;
+    }
+    .cursor-pointer{
+        cursor:pointer;
+    }
+    #bars{
+        @extend .cursor-pointer;
+    }
+    #bars-menu{
+        z-index: 15;
+        @extend .box-shadow;
+        transition: width .5s ease-in-out;
+        overflow: hidden;
+        width: 0;
+        &__close{
+            font-size: $font-x;
+        }
+    }
+    @each $value in (500, 700, 400){
+       .height-#{$value}{
+           height: #{$value}px;
+       }
+    }
+    .btn{
+        @extend .roboto-slab;
+    }
+    .profile-pic{
+        //$borderWidth: 3px;
+        //@include setBorder($grey-light);
+        @extend .border-grey-light;
+    }
+    .profile-pic-small{
+       //@include setBorder($orange-color);
+        @extend .border-grey-light;
+    }
+    .profile-pic-small-wrapper-width{
+       width: 100px;
+    }
+
+    .title-1{
+        font-size: 15px;
+    }
+    .comment{
+        //@include  setSpecificBorder(bottom, $orange-color, 3px);
+        //border-bottom: 1px solid rgba($orange-color, 0.6);
+        border-bottom: 1px solid $grey-light;
+    }
+    .comment-section{
+        display:none;
+    }
+
+    #users-profile-menu{
+        border-top :1px solid $grey-light;
+        border-bottom: 1px solid $grey-light;
+    }
+    .follower-card{
+        //@include setBorder($grey-light);
+        @extend .border-grey-light;
+    }
+    .discusions {
+        @extend .border-grey-light;
+    }
+
+    .transparent-grey-dark{
+    }
+    .my-modal{
+        background-color: rgba($grey-dark-color, .6);
+        position: fixed;
+        top:0;
+        z-index: 100;
+        height: 100vh;
+    }
+    .category{
+        @include setBorder($orange-color, 2px);
+        @extend .orange-backcolor;
+        @extend .white-forecolor;
+        padding: 5px;
+        &-name{
+            //border-bottom: 2px solid $white;
+        }
+    }
